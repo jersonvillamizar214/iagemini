@@ -14,7 +14,7 @@ providers:
       temperature: 0.7
       maxConcurrency: 1
 
-# Tests importados desde archivo JSON (generados automáticamente)
+# Tests importados desde archivo JSON (generados automáticamente c:)
 tests: file://tests.json
 
 # Validación genérica: solo verificar que haya respuesta
