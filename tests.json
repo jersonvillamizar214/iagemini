@@ -1,27 +1,17 @@
 [
   {
     "vars": {
-      "prompt": "Define los 5 principales KPIs de un dashboard de 'Comercio Electrónico en Vivo'."
+      "prompt": "Define los 5 principales KPIs de un dashboard de {{dominio}}."
     }
   },
   {
     "vars": {
-      "prompt": "Genera una estructura de 4 pestañas principales para el dashboard."
+      "prompt": "Sugiere una paleta de colores accesible (5 colores en hexadecimal) para un dashboard de {{dominio}}."
     }
   },
   {
     "vars": {
-      "prompt": "Crea una matriz de decisiones para elegir entre Kafka y RabbitMQ para ingesta de datos en tiempo real."
-    }
-  },
-  {
-    "vars": {
-      "prompt": "Redacta un User Story para un analista de operaciones que necesita detectar anomalías en tiempo real."
-    }
-  },
-  {
-    "vars": {
-      "prompt": "Sugiere una paleta de colores accesible (5 colores en hexadecimal) para un dashboard de monitoreo."
+      "prompt": "Lista 4 acciones interactivas que un usuario debe poder hacer en un dashboard de {{dominio}}."
     }
   }
 ]

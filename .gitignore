@@ -1,0 +1,30 @@
+# Node modules y archivos de package
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Archivos generados automáticamente
+tests.json
+
+# Resultados de evaluaciones de promptfoo
+.promptfoo/
+output/
+
+# Archivos temporales
+*.log
+*.tmp
+.DS_Store
+
+# Variables de entorno (si decides usarlas en archivo)
+.env
+.env.local
+
+# API Keys (por seguridad, aunque ya están en el yaml)
+# Considera mover las API keys a variables de entorno
+
+# Archivos de sistema
+Thumbs.db
+*.swp
+*.swo
+*~

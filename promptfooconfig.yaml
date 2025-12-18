@@ -1,12 +1,14 @@
 # yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
-description: 'Evaluación de 40 prompts del proyecto Dashboard'
+description: 'Evaluación de prompts del proyecto Dashboard'
 
 env:
   GEMINI_API_KEY: AIzaSyA8X8kwMdGXAj5C2Bb5TYnErav3jLySpyc
 
-# Un solo template que usa la variable prompt
+# Prompts con variables - se reemplaza {{dominio}} con los valores de tests
 prompts:
-  - '{{prompt}}'
+  - 'Define los 5 principales KPIs de un dashboard de {{dominio}}.'
+  - 'Sugiere una paleta de colores accesible (5 colores en hexadecimal) para un dashboard de {{dominio}}.'
+  - 'Lista 4 acciones interactivas que un usuario debe poder hacer en un dashboard de {{dominio}}.'
 
 providers:
   - id: google:gemini-2.5-flash
@@ -14,10 +16,19 @@ providers:
       temperature: 0.7
       maxConcurrency: 1
 
-# Tests importados desde archivo JSON (generados automáticamente c:)
-tests: file://tests.json
+# Tests: cada valor de dominio se probará con TODOS los prompts de arriba
+# 3 prompts × 3 dominios = 9 evaluaciones
+tests:
+  - vars:
+      dominio: 'Comercio Electrónico en Vivo'
 
-# Validación genérica: solo verificar que haya respuesta
+  - vars:
+      dominio: 'Monitoreo de Servidores'
+
+  - vars:
+      dominio: 'Análisis de Redes Sociales'
+
+# Validación por defecto aplicada a TODOS los tests
 defaultTest:
   assert:
     - type: javascript
