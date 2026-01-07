@@ -2,7 +2,7 @@
 description: 'Evaluación de prompts del proyecto Dashboard'
 
 env:
-  GEMINI_API_KEY: AIzaSyA8X8kwMdGXAj5C2Bb5TYnErav3jLySpyc
+  GEMINI_API_KEY: AIzaSyBrwm72GtT23nUwZurUafRQePWJjbRqTk8
 
 # Prompts con variables - se reemplaza {{dominio}} con los valores de tests
 prompts:
